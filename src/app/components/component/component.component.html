@@ -1,0 +1,79 @@
+<div class="contenedor">
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[0].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[0].age}}</h2>
+             <button (click)="checkAge(0)">Verificar Edad</button>
+             <p *ngIf="condition[0]">{{ condition[0] }}</p>
+          </div>
+
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[1].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[1].age}}</h2>
+             <button (click)="checkAge(1)">Verificar Edad</button>
+             <p *ngIf="condition[1]">{{ condition[1] }}</p>
+          </div>
+
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[2].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[2].age}}</h2>
+             <button (click)="checkAge(2)">Verificar Edad</button>
+             <p *ngIf="condition[2]">{{ condition[2] }}</p>
+          </div>
+
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[3].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[3].age}}</h2>
+             <button (click)="checkAge(3)">Verificar Edad</button>
+             <p *ngIf="condition[3]">{{ condition[3] }}</p>
+          </div>
+
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[4].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[4].age}}</h2>
+             <button (click)="checkAge(4)">Verificar Edad</button>
+             <p *ngIf="condition[4]">{{ condition[4] }}</p>
+          </div>
+
+          <div class = "BigBox">
+            <h1 class="PersonName">Nombre: {{persons[5].name}}</h1>
+            <img class="photo_img" [src]="persons[2].photo" alt="Foto de {{ persons[2].name }}" />
+             <h2 class="PersonAge">Edad: {{persons[5].age}}</h2>
+             <button (click)="checkAge(5)">Verificar Edad</button>
+             <p *ngIf="condition[5]">{{ condition[5] }}</p>
+
+
+
+          </div>
+
+
+
+
+
+
+
+</div>
+
+<div class="contenedor">
+
+    <div class="BigBox" *ngFor="let item of persons;let i=index">
+      <h1 class="PersonName">Nombre: {{item.name}}</h1>
+      <img class="photo_img" [src]="item.photo" alt="Foto de {{ item.name }}" />
+       <h2 class="PersonAge">Edad: {{item.age}}</h2>
+       <button (click)="checkAge2(item.age,i)">Verificar Edad</button>
+      <p *ngIf="resultado && index ===i">{{resultado}}</p>
+    </div>
+
+</div>
+
+
+<div class="contenedor">
+
+  <div class="BigBox" *ngFor="let item of persons">
+  </div>
+
+</div>
